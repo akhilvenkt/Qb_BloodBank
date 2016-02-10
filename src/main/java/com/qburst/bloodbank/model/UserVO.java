@@ -6,13 +6,17 @@ package com.qburst.bloodbank.model;
 
 import java.util.Date;
 
-import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlRootElement; 
+
+import org.codehaus.jackson.map.annotate.JsonSerialize;
 
 /**
  * @author Akhil Vennakkat(2736)
  *
  */
+
 @XmlRootElement(name = "UserVO")
+@JsonSerialize(include=JsonSerialize.Inclusion.NON_NULL)
 public class UserVO {
 
 	private String userName;
