@@ -1,0 +1,33 @@
+Service Name: Register User Service
+url: http://localhost:8080/BloodBankService/user/register
+http method: POST
+http header: Content-Type: application/json
+payload: JSON in the below format (password handling to be confirmd)
+
+{
+	   "userName":"Akhil",
+	   "userId": "2739",
+        	   "preferredName" : "Akhil V",
+               "address": "Phase 3 Ganga" ,
+	   "location": "Phase 3 Ganga",
+      	   "mobileNo":"9746258040",
+	   "email": "akhilv@qburst.com",
+	   "bloodGroup": "A+ve" ,
+	   "weight": "68",
+     	   "dateOfBirth":"29-Jan-1990",
+              "gender": "Male",
+      	   "password" : "***"
+		}
+
+Service Name: Search Blood Service
+url: http://localhost:8080/BloodBankService/bloodSearch/{bloodgroup}/{location}
+http method: GET
+assumption : when either search parameter is null pass NA in url
+
+Service Name: Delete User Service
+url: http://localhost:8080/BloodBankService/user/{userId}
+http method: DELETE
+
+Service Name: Find User Service
+url: http://localhost:8080/BloodBankService/user/{userName}
+http method: GET
